@@ -1,0 +1,14 @@
+{
+  "hash": "65efd316d0ca29d5625521836c67afb0",
+  "result": {
+    "markdown": "---\ntitle: \"First Demo Code\"\nauthor: \"Md Shazalal Tushar\"\ndate: \"2023-11-15\"\ncategories: [random]\nimage: \"image.jpg\"\n---\n\n\nHere, I am going to run 55+61\n\n\n::: {.cell}\n\n```{.r .cell-code}\n55+61\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 116\n```\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
