@@ -3,7 +3,7 @@ title: "Clustering"
 author: "Md Shazalal Tushar"
 date: "2023-11-27"
 categories: [Machine Learning, Clustering]
-image: "Dice.jpg"
+image: "Clustering.jpg"
 ---
 
 In this blog, I will cover clustering, types of clustering, and an example of clustering using XYZ data.

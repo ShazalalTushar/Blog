@@ -1,0 +1,22 @@
+"0","# Visualize the results (2D scatter plot for simplicity)"
+"0","plt.figure(figsize=(8, 8))"
+"1","<Figure size 800x800 with 0 Axes>
+"
+"0","plt.scatter(y_pred_rf, y_test, color='grey', alpha= 0.1)"
+"1","<matplotlib.collections.PathCollection object at 0x0000024C9B6D44D0>
+"
+"0","plt.plot([0, y_test.max()], [0, y_test.max()], linestyle='--', color='black', linewidth=2, label='1:1 Line')"
+"1","[<matplotlib.lines.Line2D object at 0x0000024CA12C3090>]
+"
+"0","plt.xlabel('Predicted housing price in RF')"
+"1","Text(0.5, 0, 'Predicted housing price in RF')
+"
+"0","plt.ylabel('Actual housing price')"
+"1","Text(0, 0.5, 'Actual housing price')
+"
+"0","plt.legend()"
+"1","<matplotlib.legend.Legend object at 0x0000024C9B68CB50>
+"
+"0","plt.show()"
+"0",""
+"0",""

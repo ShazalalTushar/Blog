@@ -1,0 +1,10 @@
+"0","drop_columns= ['id', 'date','sqft_lot', 'floors', 'waterfront', 'view', 'condition', 'grade','sqft_above', 'sqft_basement', 'yr_built', 'yr_renovated', 'zipcode','lat', 'long', 'sqft_living15', 'sqft_lot15']"
+"0","Data.drop(columns=drop_columns,inplace=True)"
+"0","Data.head(5)"
+"1","      price  bedrooms  bathrooms  sqft_living
+0  221900.0         3       1.00         1180
+1  538000.0         3       2.25         2570
+2  180000.0         2       1.00          770
+3  604000.0         4       3.00         1960
+4  510000.0         3       2.00         1680
+"

@@ -1,0 +1,24 @@
+"0","plt.figure(figsize=(8, 8))  # Set a square figure size"
+"1","<Figure size 800x800 with 0 Axes>
+"
+"0","# Plot y_pred in red"
+"0","plt.scatter(y_pred, y_test, color='green', alpha=0.1)"
+"1","<matplotlib.collections.PathCollection object at 0x0000024CF7A9B490>
+"
+"0","# Plot y_test as a line for reference"
+"0","plt.plot([0, y_test.max()], [0, y_test.max()], linestyle='--', color='red', linewidth=2, label='1:1 Line')"
+"1","[<matplotlib.lines.Line2D object at 0x0000024C8B725650>]
+"
+"0","plt.xlabel('Predicted Housing Price')"
+"1","Text(0.5, 0, 'Predicted Housing Price')
+"
+"0","plt.ylabel('Actual Housing Price')"
+"1","Text(0, 0.5, 'Actual Housing Price')
+"
+"0","plt.title('Linear Regression on King County Housing Dataset')"
+"1","Text(0.5, 1.0, 'Linear Regression on King County Housing Dataset')
+"
+"1","<matplotlib.legend.Legend object at 0x0000024C8A7D6050>
+"
+"0","plt.show()"
+"0",""

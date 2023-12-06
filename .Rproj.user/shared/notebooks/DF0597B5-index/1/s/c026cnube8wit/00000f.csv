@@ -1,0 +1,16 @@
+"0","from sklearn.ensemble import RandomForestRegressor"
+"0",""
+"0","# Create and train the Random Forest Regression model"
+"0","model = RandomForestRegressor(n_estimators=100, random_state=42)"
+"0","model.fit(X_train, y_train)"
+"1","RandomForestRegressor(random_state=42)
+"
+"0","# Make predictions on the test set"
+"0","y_pred_rf = model.predict(X_test)"
+"0",""
+"0","# Evaluate the model"
+"0","r2_rf = r2_score(y_test, y_pred)"
+"0",""
+"0","print(f'R-squared of RF (R²): {r2_rf:.2f}')"
+"1","R-squared of RF (R²): 0.52
+"
