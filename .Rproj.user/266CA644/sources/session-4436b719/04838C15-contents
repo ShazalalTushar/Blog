@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "Machine Learning Blogs"
 listing:
   contents: posts
   sort: "date desc"

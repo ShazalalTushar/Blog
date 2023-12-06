@@ -3,7 +3,7 @@
     "path": "D:/VT Class Resourse/2-1/Machine Learning/Quarto Blog/Blog/index.qmd",
     "project_path": "index.qmd",
     "type": "quarto_markdown",
-    "hash": "0",
+    "hash": "864558264",
     "contents": "",
     "dirty": false,
     "created": 1700085107475.0,
@@ -18,14 +18,14 @@
         "rmdVisualCollapsedChunks": "",
         "cursorPosition": "0,0",
         "scrollLine": "0",
-        "rmdVisualModeLocation": "2:0"
+        "rmdVisualModeLocation": "36:0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1700085173,
+    "lastKnownWriteTime": 1701894832,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1700085173436,
+    "last_content_update": 1701894832234,
     "read_only": false,
     "read_only_alternatives": []
 }
