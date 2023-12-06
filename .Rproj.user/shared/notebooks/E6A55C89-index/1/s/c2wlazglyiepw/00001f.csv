@@ -1,0 +1,76 @@
+"0","import pandas as pd"
+"0","import numpy as np"
+"0","import matplotlib.pyplot as plt"
+"0","from sklearn import datasets"
+"0","from sklearn.model_selection import train_test_split"
+"0","from sklearn.linear_model import LogisticRegression"
+"0","from sklearn.metrics import confusion_matrix"
+"0",""
+"0","# Load the iris dataset"
+"0","iris = datasets.load_iris()"
+"0","X = iris.data"
+"0","y = iris.target"
+"0",""
+"0","# Split the data into training and testing sets"
+"0","X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)"
+"0",""
+"0","# Train a logistic regression model"
+"0","model = LogisticRegression()"
+"0","model.fit(X_train, y_train)"
+"1","LogisticRegression()
+"
+"0","# Make predictions on the test set"
+"0","y_pred = model.predict(X_test)"
+"0",""
+"0","# Generate confusion matrix"
+"0","conf_matrix = confusion_matrix(y_test, y_pred)"
+"0",""
+"0","# Create a DataFrame for better visualization"
+"0","conf_df = pd.DataFrame(conf_matrix, index=iris.target_names, columns=iris.target_names)"
+"0",""
+"0","# Specify the plot size"
+"0","plt.figure(figsize=(8, 8))"
+"1","<Figure size 800x800 with 0 Axes>
+"
+"0","# Create a heatmap using Matplotlib's imshow"
+"0","plt.imshow(conf_df, interpolation='nearest', cmap=plt.cm.Greens)"
+"1","<matplotlib.image.AxesImage object at 0x0000024C9C55EBD0>
+"
+"0","# Add annotations with actual values"
+"0","for i in range(len(iris.target_names)):"
+"0","    for j in range(len(iris.target_names)):"
+"0","        plt.text(j, i, str(conf_df.iloc[i, j]), ha='center', va='center')"
+"0","        "
+"0","plt.title('Confusion Matrix Heatmap')"
+"1","Text(0, 0, '13')
+Text(1, 0, '0')
+Text(2, 0, '0')
+Text(0, 1, '0')
+Text(1, 1, '15')
+Text(2, 1, '1')
+Text(0, 2, '0')
+Text(1, 2, '0')
+Text(2, 2, '9')
+Text(0.5, 1.0, 'Confusion Matrix Heatmap')
+"
+"0","plt.colorbar()"
+"1","<matplotlib.colorbar.Colorbar object at 0x0000024C9C5C1CD0>
+"
+"0","plt.xticks(np.arange(len(iris.target_names)), iris.target_names, rotation=0)"
+"1","([<matplotlib.axis.XTick object at 0x0000024C9CD38F50>, <matplotlib.axis.XTick object at 0x0000024C9CA26B90>, <matplotlib.axis.XTick object at 0x0000024C9CD24290>], [Text(0, 0, 'setosa'), Text(1, 0, 'versicolor'), Text(2, 0, 'virginica')])
+"
+"0","plt.yticks(np.arange(len(iris.target_names)), iris.target_names)"
+"1","([<matplotlib.axis.YTick object at 0x0000024C9CD3A310>, <matplotlib.axis.YTick object at 0x0000024C9CD7DFD0>, <matplotlib.axis.YTick object at 0x0000024C9CAD9490>], [Text(0, 0, 'setosa'), Text(0, 1, 'versicolor'), Text(0, 2, 'virginica')])
+"
+"0","plt.xlabel('Predicted')"
+"1","Text(0.5, 0, 'Predicted')
+"
+"0","plt.ylabel('True')"
+"1","Text(0, 0.5, 'True')
+"
+"0","plt.show()"
+"0","# Calculating the accuracy of the classification"
+"0","accuracy=accuracy_score(y_test,y_pred)*100"
+"0","print(""Accuracy of the model is {:.2f}"".format(accuracy))"
+"1","Accuracy of the model is 97.37
+"

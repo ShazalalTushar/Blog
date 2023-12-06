@@ -1,0 +1,5 @@
+"0","# Calculating the accuracy of the classification"
+"0","accuracy=accuracy_score(y_test,y_pred)*100"
+"0","print(""Accuracy of the model is {:.2f}"".format(accuracy))"
+"1","Accuracy of the model is 97.37
+"

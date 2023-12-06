@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Harlow Malloc">
-<meta name="dcterms.date" content="2023-11-15">
+<meta name="author" content="Md Shazalal Tushar">
+<meta name="dcterms.date" content="2023-12-04">
 
-<title>Blog - Post With Code</title>
+<title>Blog - Classification in Machine Learning</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -142,11 +142,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Post With Code</h1>
+      <h1 class="title">Classification in Machine Learning</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">news</div>
-                <div class="quarto-category">code</div>
-                <div class="quarto-category">analysis</div>
+                <div class="quarto-category">Machine Learning</div>
+                <div class="quarto-category">Classification</div>
               </div>
                   </div>
   </div>
@@ -157,14 +156,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Harlow Malloc </p>
+               <p>Md Shazalal Tushar </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">November 15, 2023</p>
+        <p class="date">December 4, 2023</p>
       </div>
     </div>
     
@@ -182,13 +181,125 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<p>This is a post with executable code.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Classification</strong></p>
+<p>A classification algorithm is a machine learning algorithm that categorizes or assigns predefined labels or classes to data based on its features or attributes. It is a Supervised Learning Technique used to classify new observations.</p>
+<p>The Classification algorithm uses labeled input data since it is a supervised learning technique that includes input and output data. The classification procedure (x) converts a discrete output function (y) to an input variable.</p>
+<p>Numerous issues can be solved using classification algorithms, such as image recognition, sentiment analysis, medical diagnosis, and spam email detection. The classification algorithm to be used is determined by the nature of the data as well as the specific requirements of the problem at hand, as different algorithms may perform better for different types of data and tasks.</p>
+<p>There are two types of learners in machine learning classification: lazy and eager learners.</p>
+<p><strong>Eager learners</strong> are machine learning algorithms that first build a model from the training dataset before making any prediction on future datasets. They spend more time during the training process because of their eagerness to have a better generalization during the training from learning the weights, but they require less time to make predictions.</p>
+<p>Most machine learning algorithms are eager learners, and below are some examples:</p>
+<ul>
+<li><p>Logistic Regression.</p></li>
+<li><p>Support Vector Machine.</p></li>
+<li><p>Decision Trees.</p></li>
+<li><p>Artificial Neural Networks.</p></li>
+</ul>
+<p><strong>Lazy learners or instance-based learners</strong>, on the other hand, do not create any model immediately from the training data, and this is where the lazy aspect comes from. They just memorize the training data, and each time there is a need to make a prediction, they search for the nearest neighbor from the whole training data, which makes them very slow during prediction. Some examples of this kind are:</p>
+<ul>
+<li><p>K-Nearest Neighbor.</p></li>
+<li><p>Case-based reasoning.</p></li>
+</ul>
+<p>However, some algorithms, such asBallTrees andKDTrees, can be used to improve the prediction latency.</p>
+<p><strong>Different Types of Classification Tasks in Machine Learning</strong></p>
+<p>There are four main classification tasks in Machine learning: binary, multi-class, multi-label, and imbalanced classifications.</p>
+<p><strong>Binary Classification</strong></p>
+<p>In a binary classification task, the goal is to classify the input data into two mutually exclusive categories. The training data in such a situation is labeled in a binary format: true and false; positive and negative; O and 1; spam and not spam, etc. depending on the problem being tackled.Logistic Regression and Support Vector Machines algorithms are natively designed for binary classifications. However, other algorithms such as K-Nearest Neighbors and Decision Trees can also be used for binary classification.</p>
+<p><strong>Multi-class Classification</strong></p>
+<p>The multi-class classification, on the other hand, has at least two mutually exclusive class labels, where the goal is to predict to which class a given input example belongs to. Most of the binary classification algorithms can be also used for multi-class classification. These algorithms include- Random Forest, Naive Bayes, K-Nearest Neighbors, Gradient Boosting, SVM, Logistic Regression.</p>
+<p><strong>Multi-label Classification</strong></p>
+<p>In multi-label classification tasks, we try to predict 0 or more classes for each input example. In this case, there is no mutual exclusion because the input example can have more than one label. It is not possible to use multi-class or binary classification models to perform multi-label classification. However, most algorithms used for those standard classification tasks have their specialized versions for multi-label classification such as- <em>Multi-label Decision Trees, Multi-label Gradient Boosting, and Multi-label Random Forests</em></p>
+<p><strong>Imbalance Classification</strong></p>
+<p>For the imbalanced classification, the number of examples is unevenly distributed in each class, meaning that we can have more of one class than the others in the training data.Using conventional predictive models such as Decision Trees, Logistic Regression, etc. could not be effective when dealing with an imbalanced dataset, because they might be biased toward predicting the class with the highest number of observations, and considering those with fewer numbers as noise. The most commonly used approaches include sampling techniques or harnessing the power of cost-sensitive algorithms.</p>
+<p><strong>Types of Classification in Machine Learning</strong></p>
+<p>There are seven types of classification in machine learning and all seven models are called&nbsp;deep learning classification models.</p>
+<p><strong>Logistic Regression</strong></p>
+<p>In this algorithmic classification, using logistic functions, the possible outcome of a single trial is modelled. The advantage of this logistic regression is that it receive multiple variables and gives a single output variable. It works when a binary classification machine learningvariable is present.</p>
+<p><strong>Naive Bayes</strong></p>
+<p>Bayes is the theorem of algorithmic classification for every single feature. Classification and spam filtering work in many real-world documents. Getting the necessary parameters requires a small amount of training and works extremely fast compared to more experienced methods. It is the advantage of naive Bayes. It works only when there is a predictor variable. And this is the disadvantage of Naive Bayes.</p>
+<p><strong>Stochastic Gradient Descent</strong></p>
+<p>In linear models of algorithm classification, stochastic gradient descent works very easily and efficiently, supporting the function and penalties. It is structured and simple to execute. This is the advantage of stochastic gradient descent. It is hard to scale. Hence, it requires hyper-parameters. This is the disadvantage of stochastic gradient descent.</p>
+<p><strong>K-Nearest Neighbors</strong></p>
+<p>Neighbour's algorithm classification is known as lazy learning. It does not work in a general internal model but simply stores the training data. It has a simple majority vote for each point. Neighbor algorithm classification is easy to implement and contains a large number of training datasets. This is the advantage of having neighbors. The K value is high and needs to be controlled. This is the disadvantage of the neighbor's classification.</p>
+<p><strong>Decision Tree</strong></p>
+<p>The classes get the attribute of datasets to classify. The decision tree can handle both numerical and categorical datasets in algorithmic classification. It is easy to understand and visualize. This is the advantage of the decision tree. If it is not generalized well, it may create a decision-tree complex. This is the disadvantage of the decision tree algorithm classification.</p>
+<p><strong>Random Forest</strong></p>
+<p>For overfitting a model and controlling the Meta, the estimator takes the number of various decision trees to improve the classifier in a random forest. Overfitting and the random forest are better classifiers. It is the advantage of a random forest. It has a complement algorithm for classification and is difficult to implement. And this is the disadvantage of random forests.</p>
+<p><strong>Support vector Machine</strong></p>
+<p>Support vector machine takes the training data as points and spaces them out into categories by clearing the gap in this algorithm’s classification. It is high-dimensional and memory-efficient. This is the advantage of a support vector machine. The algorithmic classification is not provided directly, and they are very expensive in five-fold cross-validation. And this is the disadvantage of a support vector machine.</p>
+<p>Below is an example where I have used the iris dataset to predict the species using linear regression model</p>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn <span class="im">import</span> datasets</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LogisticRegression</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> accuracy_score</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> confusion_matrix</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the iris dataset</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>iris <span class="op">=</span> datasets.load_iris()</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> iris.data</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> iris.target</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Split the data into training and testing sets</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(X, y, random_state<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Train a logistic regression model</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> LogisticRegression()</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>model.fit(X_train, y_train)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Make predictions on the test set</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>y_pred <span class="op">=</span> model.predict(X_test)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate confusion matrix</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>conf_matrix <span class="op">=</span> confusion_matrix(y_test, y_pred)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a DataFrame for better visualization</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>conf_df <span class="op">=</span> pd.DataFrame(conf_matrix, index<span class="op">=</span>iris.target_names, columns<span class="op">=</span>iris.target_names)</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Specify the plot size</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">8</span>))</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a heatmap using Matplotlib's imshow</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>plt.imshow(conf_df, interpolation<span class="op">=</span><span class="st">'nearest'</span>, cmap<span class="op">=</span>plt.cm.Greens)</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Add annotations with actual values</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(iris.target_names)):</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(iris.target_names)):</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>        plt.text(j, i, <span class="bu">str</span>(conf_df.iloc[i, j]), ha<span class="op">=</span><span class="st">'center'</span>, va<span class="op">=</span><span class="st">'center'</span>)</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Confusion Matrix Heatmap'</span>)</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>plt.colorbar()</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>plt.xticks(np.arange(<span class="bu">len</span>(iris.target_names)), iris.target_names, rotation<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>plt.yticks(np.arange(<span class="bu">len</span>(iris.target_names)), iris.target_names)</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Predicted'</span>)</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'True'</span>)</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>C:\Users\shaza\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\linear_model\_logistic.py:460: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="index_files/figure-html/cell-2-output-2.png" width="674" height="619"></p>
+</div>
+</div>
+<p>Now, I will calculate the accuracy of the model-</p>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculating the accuracy of the classification</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>accuracy<span class="op">=</span>accuracy_score(y_test,y_pred)<span class="op">*</span><span class="dv">100</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Accuracy of the model is </span><span class="sc">{:.2f}</span><span class="st">"</span>.<span class="bu">format</span>(accuracy))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
+<pre><code>Accuracy of the model is 97.37</code></pre>
 </div>
 </div>
+<p>The accuracy of the model is 97.37% as it predicted one virginica which is versicolor in reality.</p>
 
 
 
