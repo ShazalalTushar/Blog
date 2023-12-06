@@ -1,14 +1,14 @@
 {
-    "id": "04838C15",
-    "path": "D:/VT Class Resourse/2-1/Machine Learning/Quarto Blog/Blog/index.qmd",
-    "project_path": "index.qmd",
+    "id": "1E74C6EC",
+    "path": "D:/VT Class Resourse/2-1/Machine Learning/Quarto Blog/Blog/posts/First-Post/index.qmd",
+    "project_path": "posts/First-Post/index.qmd",
     "type": "quarto_markdown",
-    "hash": "498099461",
+    "hash": "1487414038",
     "contents": "",
     "dirty": false,
-    "created": 1700085107475.0,
+    "created": 1700085259881.0,
     "source_on_save": false,
-    "relative_order": 1,
+    "relative_order": 3,
     "properties": {
         "rmdVisualMode": "true",
         "rmdVisualWrapConfigured": "true",
@@ -16,16 +16,16 @@
         "Source": "Source",
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
+        "rmdVisualModeLocation": "553:0",
         "cursorPosition": "0,0",
-        "scrollLine": "0",
-        "rmdVisualModeLocation": "2:0"
+        "scrollLine": "60"
     },
     "folds": "",
-    "lastKnownWriteTime": 1700085173,
+    "lastKnownWriteTime": 1701834533,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1700085173436,
+    "last_content_update": 1701834533159,
     "read_only": false,
     "read_only_alternatives": []
 }

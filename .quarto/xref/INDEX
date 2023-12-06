@@ -13,5 +13,11 @@
   },
   "posts/First-Post/index.qmd": {
     "index.html": "ed5110a2"
+  },
+  "posts/First-Post/PDF CDF.ipynb": {
+    "PDF CDF.html": "7c43f8c2"
+  },
+  "posts/First-Post/PDF_CDF.ipynb": {
+    "PDF_CDF.html": "bf0e6d98"
   }
 }

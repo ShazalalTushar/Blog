@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Md Shazalal Tushar">
-<meta name="dcterms.date" content="2023-11-24">
+<meta name="dcterms.date" content="2023-11-15">
 
-<title>Blog - Random Variable</title>
+<title>Blog - First Demo Code</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -96,8 +96,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -144,9 +142,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Random Variable</h1>
+      <h1 class="title">First Demo Code</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">Machine Learning</div>
+                <div class="quarto-category">random</div>
               </div>
                   </div>
   </div>
@@ -164,7 +162,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">November 24, 2023</p>
+        <p class="date">November 15, 2023</p>
       </div>
     </div>
     
@@ -182,109 +180,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<p>In this blog, I will cover random variable, types of random variable, probability density function (PDF), cumulative density function (CDF), relation between PDF and CDF. At the end, I will also plot PDF and CDF for Capital Bikeshare trip duration under 60 minutes for both type of user- Member and Casual.</p>
-<p><strong>Random Variable</strong></p>
-<p>A random variable is a variable whose possible values are numerical outcomes of a random phenomenon in a sample space. For example, if we roll two fair dice at a time the probability of having a sum of 2 {P(X=2)} is 1/36 since it can only occur when there is 1 on both dices. Similarly the probability of having a sum of 6 {P(X=6)} is 5/36 since we can have a sum of 6 in the following events- {1,5}, {2,4}, {3,3}, {4,2}, {5,1} and the total number of possible events is 36.</p>
-<p><strong>Types of Random Variable</strong></p>
-<p>There are two types of random variable-</p>
-<p><strong>i) Discrete Random Variable</strong></p>
-<p>Discrete Random Variables can have a finite number of distinct values. For example, the number of students present in a class, the number obtained from a dice throw, etc. The probability function for Discrete Random Variable is PMF (Probability Mass Function).</p>
-<p><strong>ii) Continuous Random Variable</strong></p>
-<p>Continuous Random Variables can take on an infinite number of values such as the weight of the students in class room. The probability function for continuous random variable is PDF.</p>
-<p><strong>Probability Distributions</strong></p>
-<p>Probabilities assigned to various outcomes in the sample space <strong><em>S</em></strong>, in turn, determine probabilities associated with the values of any particular random variable defined on <strong><em>S.</em></strong></p>
-<p><strong>Probability Mass Function (PMF)</strong> is used for discrete random variables and it describes how the total probability is distributed among all the possible range values of the Random Variable X. For example, the probability mass function of rolling a dice is as follows-</p>
-<table class="table">
-<thead>
-<tr class="header">
-<th>x</th>
-<th>0</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-<th>5</th>
-<th>6</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>p(x)</td>
-<td>1/6</td>
-<td>1/6</td>
-<td>1/6</td>
-<td>1/6</td>
-<td>1/6</td>
-<td>1/6</td>
-<td>1/6</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Probability Density Function (PDF)</strong> is used for continuous random variables and it defines the probability function representing the density of a continuous random variable lying between a specific range of values. PDF satisfies the following-</p>
-<p>i. f(x) <span class="math inline">\(\geq\)</span> 0, for all x <span class="math inline">\(\epsilon\)</span> <strong>R</strong></p>
-<p>ii. f is piecewise continuous</p>
-<p>iii. <span class="math inline">\(\int_{-\infty}^{\infty}\)</span> f(x) = 1</p>
-<p>For a given limit of a to b, the PDF of a continuous random variable will be, <span class="math display">\[P(a\leq x \leq b)= \int_{a}^{b} f(x) dx\]</span></p>
-<p><strong>Cumulative Density Function (CDF)</strong></p>
-<p>The Cumulative Distribution Function (CDF), of a real-valued random variable X, evaluated at x, is the probability function that X will take a value less than or equal to x. It is used to describe the probability distribution of random variables. The properties of a CDF is-</p>
-<ol type="i">
-<li><p>Every CDF <span class="math inline">\(F_x\)</span> is non decreasing and right continuous <span class="math inline">\(\displaystyle \lim_{x \to -\infty} F_x(x) = 0\)</span> and <span class="math inline">\(\displaystyle \lim_{x \to \infty} F_x(x) = 1\)</span></p></li>
-<li><p>For all real numbers a and b with continuous random variable X, then the function fx is equal to the derivative of <span class="math inline">\(F_x\)</span>, such that <span class="math display">\[F_x(b) - F_x(a)= P(a&lt;X\leq b)= \int_{a}^{b} f_x(x) dx\]</span></p></li>
-</ol>
-<p><strong>Relationship between PDF and CDF for a Continuous Random Variable</strong></p>
-<p>Let X be a continuous random variable with pdf f and cdf F.</p>
-<p>i. We can find the CDF by integrating the PDF-</p>
-<p><span class="math display">\[
-F_x(x)= \int_{-\infty}^{\infty} f(x) dx
-\]</span></p>
-<p>ii. We can find the PDF by differentiating the CDF-</p>
-<p><span class="math display">\[f(x)= \frac{d}{dx} F_x(x)\]</span></p>
-<p><strong>Example of PDF and CDF</strong></p>
-<p>Following is an example of PDF and CDF of Capital Bikeshare trip duration under 60 minutes for all bikeshare trips at May 2019.</p>
-<div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> norm</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>Cabi<span class="op">=</span> pd.read_csv(<span class="vs">r'D:\VT Class Resourse\2-1\Machine Learning\Data for Blog\201905-capitalbikeshare-tripdata.csv'</span>)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>Cabi[<span class="st">'Duration (minutes)'</span>]<span class="op">=</span>Cabi[<span class="st">'Duration'</span>]<span class="op">/</span><span class="dv">60</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>counts, bin_edges <span class="op">=</span> np.histogram(Cabi[<span class="st">'Duration (minutes)'</span>], bins<span class="op">=</span><span class="dv">10</span>,</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                                 density <span class="op">=</span> <span class="va">True</span>)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>pdf <span class="op">=</span> counts<span class="op">/</span>(<span class="bu">sum</span>(counts))</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>cdf <span class="op">=</span> np.cumsum(pdf)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>plt.plot(bin_edges[<span class="dv">1</span>:],pdf, label<span class="op">=</span> <span class="st">'PDF'</span>)<span class="op">;</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>plt.plot(bin_edges[<span class="dv">1</span>:], cdf, label<span class="op">=</span> <span class="st">'CDF'</span>)</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>plt.legend()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="1">
-<pre><code>&lt;matplotlib.legend.Legend at 0x1a583e4ab50&gt;</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<p><img src="index_files/figure-html/cell-2-output-2.png" width="571" height="411"></p>
-</div>
-</div>
-<p>Following is the PDF and CDF of bikeshare trip duration by Casual user and Regular members-</p>
-<div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Casual<span class="op">=</span> Cabi[Cabi[<span class="st">'Member type'</span>] <span class="op">==</span> <span class="st">'Casual'</span>]</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>Member<span class="op">=</span> Cabi[Cabi[<span class="st">'Member type'</span>] <span class="op">==</span> <span class="st">'Member'</span>]</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>C_counts, C_bin_edges <span class="op">=</span> np.histogram(Casual[<span class="st">'Duration (minutes)'</span>], bins<span class="op">=</span><span class="dv">10</span>,</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>                                 density <span class="op">=</span> <span class="va">True</span>)</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>C_pdf <span class="op">=</span> C_counts<span class="op">/</span>(<span class="bu">sum</span>(C_counts))</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>C_cdf <span class="op">=</span> np.cumsum(C_pdf)</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>plt.plot(C_bin_edges[<span class="dv">1</span>:],C_pdf,label<span class="op">=</span> <span class="st">'Casual User PDF'</span>)<span class="op">;</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>plt.plot(C_bin_edges[<span class="dv">1</span>:], C_cdf,label<span class="op">=</span> <span class="st">'Casual User CDF'</span>)</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>M_counts, M_bin_edges <span class="op">=</span> np.histogram(Member[<span class="st">'Duration (minutes)'</span>], bins<span class="op">=</span><span class="dv">10</span>,</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>                                 density <span class="op">=</span> <span class="va">True</span>)</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>M_pdf <span class="op">=</span> M_counts<span class="op">/</span>(<span class="bu">sum</span>(M_counts))</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>M_cdf <span class="op">=</span> np.cumsum(M_pdf)</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>plt.plot(M_bin_edges[<span class="dv">1</span>:],M_pdf,label<span class="op">=</span> <span class="st">'Member PDF'</span>)<span class="op">;</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>plt.plot(M_bin_edges[<span class="dv">1</span>:], M_cdf,label<span class="op">=</span> <span class="st">'Member CDF'</span>)</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>plt.legend()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="2">
-<pre><code>&lt;matplotlib.legend.Legend at 0x1a583e96d10&gt;</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<p><img src="index_files/figure-html/cell-3-output-2.png" width="571" height="411"></p>
+<p>Here, I am going to run 55+61</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">55</span><span class="sc">+</span><span class="dv">61</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 116</code></pre>
 </div>
 </div>
 
