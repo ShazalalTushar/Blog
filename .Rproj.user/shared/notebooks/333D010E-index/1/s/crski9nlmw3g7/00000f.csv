@@ -1,0 +1,96 @@
+"0","import numpy as np"
+"0","import matplotlib.pyplot as plt"
+"0","from sklearn.cluster import KMeans"
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+  File ""[90m]8;line = 119;file://C:\Users\shaza\AppData\Local\R\win-library\4.3\reticulate\python\rpytools\loader.pyC:\Users\shaza\AppData\Local\R\win-library\4.3\reticulate\python\rpytools\loader.py]8;;[39m"", line 119, in _find_and_load_hook
+    return _run_hook(name, _hook)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File ""[90m]8;line = 93;file://C:\Users\shaza\AppData\Local\R\win-library\4.3\reticulate\python\rpytools\loader.pyC:\Users\shaza\AppData\Local\R\win-library\4.3\reticulate\python\rpytools\loader.py]8;;[39m"", line 93, in _run_hook
+    module = hook()
+             ^^^^^^
+  File ""[90m]8;line = 117;file://C:\Users\shaza\AppData\Local\R\win-library\4.3\reticulate\python\rpytools\loader.pyC:\Users\shaza\AppData\Local\R\win-library\4.3\reticulate\python\rpytools\loader.py]8;;[39m"", line 117, in _hook
+    return _find_and_load(name, import_)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""[90m]8;line = 119;file://C:\Users\shaza\AppData\Local\R\win-library\4.3\reticulate\python\rpytools\loader.pyC:\Users\shaza\AppData\Local\R\win-library\4.3\reticulate\python\rpytools\loader.py]8;;[39m"", line 119, in _find_and_load_hook
+    return _run_hook(name, _hook)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File ""[90m]8;line = 93;file://C:\Users\shaza\AppData\Local\R\win-library\4.3\reticulate\python\rpytools\loader.pyC:\Users\shaza\AppData\Local\R\win-library\4.3\reticulate\python\rpytools\loader.py]8;;[39m"", line 93, in _run_hook
+    module = hook()
+             ^^^^^^
+  File ""[90m]8;line = 117;file://C:\Users\shaza\AppData\Local\R\win-library\4.3\reticulate\python\rpytools\loader.pyC:\Users\shaza\AppData\Local\R\win-library\4.3\reticulate\python\rpytools\loader.py]8;;[39m"", line 117, in _hook
+    return _find_and_load(name, import_)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'sklearn'
+"
+"0","from sklearn import datasets"
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+  File ""[90m]8;line = 119;file://C:\Users\shaza\AppData\Local\R\win-library\4.3\reticulate\python\rpytools\loader.pyC:\Users\shaza\AppData\Local\R\win-library\4.3\reticulate\python\rpytools\loader.py]8;;[39m"", line 119, in _find_and_load_hook
+    return _run_hook(name, _hook)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File ""[90m]8;line = 93;file://C:\Users\shaza\AppData\Local\R\win-library\4.3\reticulate\python\rpytools\loader.pyC:\Users\shaza\AppData\Local\R\win-library\4.3\reticulate\python\rpytools\loader.py]8;;[39m"", line 93, in _run_hook
+    module = hook()
+             ^^^^^^
+  File ""[90m]8;line = 117;file://C:\Users\shaza\AppData\Local\R\win-library\4.3\reticulate\python\rpytools\loader.pyC:\Users\shaza\AppData\Local\R\win-library\4.3\reticulate\python\rpytools\loader.py]8;;[39m"", line 117, in _hook
+    return _find_and_load(name, import_)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'sklearn'
+"
+"0","# Load Iris dataset"
+"0","iris = datasets.load_iris()"
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+NameError: name 'datasets' is not defined
+"
+"0","# Petal width and length"
+"0","X = iris.data[:, 2:4]  "
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+NameError: name 'iris' is not defined
+"
+"0","# The range of k values to try"
+"0","k_values = range(1, 11)"
+"0",""
+"0","# Calculate inertia for each k value"
+"0","inertia_values = []"
+"0","for k in k_values:"
+"0","    kmeans = KMeans(n_clusters=k, random_state=42)"
+"0","    kmeans.fit(X)"
+"0","    inertia_values.append(kmeans.inertia_)"
+"0","    "
+"0","# Plot the inertia values"
+"0","plt.figure(figsize=(10, 6))"
+"2","Traceback (most recent call last):
+  File ""<string>"", line 2, in <module>
+NameError: name 'KMeans' is not defined
+"
+"1","<Figure size 1000x600 with 0 Axes>
+"
+"0","plt.plot(k_values, inertia_values, marker='o', linestyle='-', color='b')"
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+  File ""[90m]8;line = 3575;file://C:\Users\shaza\AppData\Local\Programs\Python\Python311\Lib\site-packages\matplotlib\pyplot.pyC:\Users\shaza\AppData\Local\Programs\Python\PYTHON~1\Lib\site-packages\matplotlib\pyplot.py]8;;[39m"", line 3575, in plot
+    return gca().plot(
+           ^^^^^^^^^^^
+  File ""[90m]8;line = 1721;file://C:\Users\shaza\AppData\Local\Programs\Python\Python311\Lib\site-packages\matplotlib\axes\_axes.pyC:\Users\shaza\AppData\Local\Programs\Python\PYTHON~1\Lib\site-packages\matplotlib\axes\_axes.py]8;;[39m"", line 1721, in plot
+    lines = [*self._get_lines(self, *args, data=data, **kwargs)]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""[90m]8;line = 303;file://C:\Users\shaza\AppData\Local\Programs\Python\Python311\Lib\site-packages\matplotlib\axes\_base.pyC:\Users\shaza\AppData\Local\Programs\Python\PYTHON~1\Lib\site-packages\matplotlib\axes\_base.py]8;;[39m"", line 303, in __call__
+    yield from self._plot_args(
+               ^^^^^^^^^^^^^^^^
+  File ""[90m]8;line = 499;file://C:\Users\shaza\AppData\Local\Programs\Python\Python311\Lib\site-packages\matplotlib\axes\_base.pyC:\Users\shaza\AppData\Local\Programs\Python\PYTHON~1\Lib\site-packages\matplotlib\axes\_base.py]8;;[39m"", line 499, in _plot_args
+    raise ValueError(f""x and y must have same first dimension, but ""
+ValueError: x and y must have same first dimension, but have shapes (10,) and (0,)
+"
+"0","plt.xlabel('Number of Clusters (k)')"
+"1","Text(0.5, 0, 'Number of Clusters (k)')
+"
+"0","plt.ylabel('Inertia')"
+"1","Text(0, 0.5, 'Inertia')
+"
+"0","plt.title('Elbow Method for Optimal k')"
+"0","plt.grid(True)"
+"0","plt.show()"
+"0",""
+"0",""
