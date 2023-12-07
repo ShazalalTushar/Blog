@@ -25,5 +25,14 @@
   },
   "posts/Linear and Non-linear Regression Model/index.qmd": {
     "index.html": "cc5e4677"
+  },
+  "posts/Anomaly Detection/index.qmd": {
+    "index.html": "2707729e"
+  },
+  "posts/Classification/index.qmd": {
+    "index.html": "dcf38863"
+  },
+  "posts/Random Variable/index.qmd": {
+    "index.html": "d07be693"
   }
 }

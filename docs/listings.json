@@ -2,10 +2,11 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/post-with-code/index.html",
+      "/posts/Anomaly Detection/index.html",
+      "/posts/Classification/index.html",
       "/posts/Linear and Non-linear Regression Model/index.html",
       "/posts/Clustering/index.html",
-      "/posts/First-Post/index.html"
+      "/posts/Random Variable/index.html"
     ]
   }
 ]
